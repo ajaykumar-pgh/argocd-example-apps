@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: guestbook-ui
 spec:
+  type: ClsuterIP
+  selector:
+    app: guestbook-ui 
   ports:
   - name: http
     port: 80
     targetPort: 80
-    type: ClsuterIP
-  selector:
-    app: guestbook-ui
+  
